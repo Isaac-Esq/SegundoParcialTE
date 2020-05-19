@@ -142,7 +142,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reporte.css">
 
     <!-------GOOGLE FONTS------------>
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
@@ -152,35 +152,84 @@
     <title>Calculadora Predial Pro</title>
 </head>
 <body>
-    <div class="container-fluid" id="cf2">
-        <h3 id="titulo">Cálculo del impuesto predial</h3>
-    </div>
+
 
     <div class="container-fluid" id="cf1">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Titular</th>
+              <th scope="col">Edad</th>
+              <th scope="col">Numero de cuenta catastral</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><?php echo $nombreTitular." ".$apellidosTitular;?></td>
+              <td><?php echo $edad;?></td>
+              <td><?php echo $cuenta;?></td>
+            </tr>
+          </tbody>
+          <thead class="thead-dark">
+              <th scope="col">Domicilio</th>
+              <th scope="col">Delegacion</th>
+              <th scope="col">Tipo de predio</th>
+          </thead>
+          <tbody>
+              <td><?php echo $domicilio;?></td>
+              <td><?php echo $delegacion;?></td>
+              <td><?php echo $selectTipoP;?></td>
+          </tbody>
+        </table>
+        <div class="row">
+            <div class="col">
+                <p>
+                  <a class="btn" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="btn1">
+                    Informacion del calculo
+                  </a>
+                </p>
+                <div class="collapse" id="collapseExample">
 
+                  <div class="card card-body" id="cbody">
+                   <ul>
+                       <li><?php echo "Valor catastral = area del Predio * valor m2 de la delegación = ".$areaP. " * ".$valorm2." = ".$valorCatastral; ?>
+                       </li>
+                       <li>
+                           <?php echo "Impuesto = valor catastral * factor del tipo de Predio = ".$valorCatastral. " * ".$factor." = ".$impuesto; ?>
+                       </li>
+                   </ul>
 
+                  </div>
+                </div>
+            </div>
+            <div class="col">
+                <p>
+                  <a class="btn" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample" id="btn1">
+                    Descuentos
+                  </a>
+                </p>
+                <div class="collapse" id="collapseExample2">
 
-        <?php echo "Nombre del titular:"; ?><br>
-        <?php echo $nombreTitular." ".$apellidosTitular;?><br>
-        <?php echo "Edad:"; ?><br>
-        <?php echo $edad;?><br>
-        <?php echo "Número de cuenta catastral"; ?><br>
-        <?php echo $cuenta;?><br>
-        <?php echo "Domicilio:"; ?><br>
-        <?php echo $domicilio;?><br>
-        <?php echo "Delegación"; ?><br>
-        <?php echo $delegacion;?><br>
-        <?php echo "Valor catastral = area del Predio * valor m2 de la delegación = ".$areaP. " * ".$valorm2." = ".$valorCatastral; ?><br>
-        <?php echo "Tipo del Predio"; ?><br>
-        <?php echo $selectTipoP;?><br>
-        <?php echo "Impuesto = valor catastral * factor del tipo de Predio = ".$valorCatastral. " * ".$factor." = ".$impuesto; ?><br>
-        <?php echo "Impuesto Ajustado: ". $impuestoAjustado?><br>
-        <?php echo "Descuento por tercera edad: ".$descEdad; ?><br>
-        <?php echo $impuestoDescEdad;?><br>
-        <?php echo "Descuento por pago con tarjeta: ".$descTarjeta; ?><br>
-        <?php echo $impuestoFinal;?><br>
+                  <div class="card card-body" id="cbody">
+                   <ul>
+                       <li> <?php echo "Descuento por tercera edad: ".$descEdad; ?>
+                       </li>
+                       <li>
+                           <?php echo "Descuento por pago con tarjeta: ".$descTarjeta; ?>
+                       </li>
+                   </ul>
 
-
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col" style="text-align:center; color:white;">
+                <h4><?php echo "Impuesto Ajustado: *". $impuestoAjustado?></h4>
+            </div>
+        </div>
+        
+        
 
         <div class="row my-2" id="rowR" >
             <div class="col">
@@ -192,7 +241,7 @@
         <div class="row my-2">
             <div class="col">
                 <form action="index.php">
-                    <button type="submit" class="btn btn-dark" name="">Registrar otro pago</button>                
+                    <button type="submit" class="btn" id="btn2" name="">Registrar otro pago</button>                
                 </form>
             </div>
          </div>
