@@ -1,0 +1,71 @@
+body,html{
+    height: 100%;
+}
+body{
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    -webkit-box-shadow: 0 3000px rgba(0, 0, 0, 0.11) inset;
+    box-shadow: 0 3000px rgba(0, 0, 0, 0.29) inset;
+}
+
+#row1{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Baloo 2', cursive;
+}
+
+#col1{
+    margin-top: 15%;
+    padding: 2rem;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 20px rgba(165, 165, 165, 0.38);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.34);
+    border-radius: 10px;
+}
+
+#colbtn{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+#result{
+    border: 1px solid rgba(168, 168, 168, 0.71);
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media (min-width: 1200px){
+    #row1{
+        width: 50%;
+    }
+    #col1{
+        margin-top: 4%;
+    }
+
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+    #row1{
+        width: 50%;
+    }
+    #col1{
+        margin-top: 4%;
+    }
+    #col1 .row{
+        margin-bottom: 5px;
+    }
+}
+
+
+@media (max-width: 575.98px){
+    #row1{
+        width: 96%;
+    }
+    #col1{
+        margin-top: 4%;
+    }
+    #col1 .row{
+        margin-bottom: 5px;
+    }
+}

@@ -1,0 +1,41 @@
+body,html{
+    height: 100%;
+    background: url(../img/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#titulo{
+   text-align: center;
+    padding: 1rem;
+}
+#rowR{
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    text-align: center;
+    background: url(../img/fondoR2.jpg);
+    color: white;
+    -webkit-box-shadow: 0px 0px 20px rgba(165, 165, 165, 0.38);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.46);
+}
+
+
+#cf1{
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+}
+#cf2{
+    background-color: black;
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 575.98px){
+    #rowR{
+        width: 80%;
+        
+    }
+}

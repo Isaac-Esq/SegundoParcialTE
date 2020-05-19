@@ -1,0 +1,30 @@
+body,html{
+    height: 100%;
+}
+#cf1{
+    text-align: center;
+    font-family: 'Balsamiq Sans', cursive;
+}
+#cf2{
+    width: 80%;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+#col1 img{
+    width: 100%;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 20px rgba(165, 165, 165, 0.38);
+    box-shadow: 0px 0px 20px rgba(132, 132, 132, 0.51);
+    
+}
+
+#rowMain{
+    height: 100%;
+}
+
+#tabla2 tr td{
+    text-align: center;
+}
+table{
+    font-family: 'Balsamiq Sans', cursive;
+}
